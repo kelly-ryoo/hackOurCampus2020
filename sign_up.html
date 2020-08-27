@@ -28,11 +28,22 @@
         
         <div class="col-sm-4 text-right">
           <section class="row"><label class="form_label col-sm-4">name</label><input class="text_field col-sm-6" type="text" name="name"></input></section>
-          <section class="row"><label class="form_label col-sm-4">username</label><input class="text_field col-6 col-sm-6" type="text" name="email"></input></section>
+          <section class="row"><label class="form_label col-sm-4">email</label><input class="text_field col-6 col-sm-6" type="text" name="email"></input></section>
           <section class="row"><label class="form_label col-sm-4">username</label><input class="text_field col-sm-6" type="text" name="username"></input></section>
           <section class="row"><label class="form_label col-sm-4">password</label><input class="text_field col-sm-6" type="text" name="password"></input></section>
           <section class="row"><label class="form_label col-sm-4">grade</label><input class="text_field col-sm-6" type="text" name="grade"></input></section>
-          <section class="row"><label class="form_label col-sm-4">courses</label><input class="course_text_field col-sm-6" type="text" name="courses"></input></section>
+          <section class="row">
+            <label class="form_label col-sm-4">gender</label>
+            <div class="col-sm-6 text-left" id="gender_section">
+              <input id="gender" type="radio" name="gender" value="gender">
+                <label for="gender" class="radio_label">Woman</label>
+              </input>
+              <input id="gender" type="radio" name="gender" value="gender" style="margin-left:10px;">
+                <label for="gender" class="radio_label">Man</label>
+              </input>
+            </div>
+          </section>
+          <section class="row"><label class="form_label col-sm-4">courses<p class="course_subtext">separated by commas</p></label><input class="course_text_field col-sm-6" type="text" name="courses"></input></section>
         </div>
 
         <div class="col-sm-4">

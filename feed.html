@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -22,19 +22,25 @@
 <body class="container" id="feed_pg">
 
 <div class="body">
-  <div class="col-sm-1"></div>
 
-  <div class="col-sm-5">
-    <!-- profile picture goes here-->
+  <div class="col-sm-6">
+    <img src="images/default-man.png" class="feed_img">
     <button>Contact Info</button>
   </div>
 
   <div class="col-sm-5">
     <h2 id="feed_name">Name lastname</h2>
-    <p id="feed_gm">grade, major name</p>
+    <h4 id="feed_gm">grade, major name</h4>
+
+    <h3 class="feed_label">courses in common with you:</h3>
+    <p></p>
+
+    <h3 class="feed_label">study habits in common with you:</h3>
+    <p></p>
   </div>
 
-  <div class="col-sm-1"><button>&#8658</button></div>
+  <script src="https://use.fontawesome.com/960dfa1218.js"></script>
+  <div class="col-sm-1"><button id="feed_next"><i class="fa fa-angle-double-right fa-4x"></i></button></div>
 </div>
 
 </body>
