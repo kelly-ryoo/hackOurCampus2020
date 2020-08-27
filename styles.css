@@ -137,3 +137,23 @@
     border: thin solid black;
     background-color: rgba(0,0,0,0);  
 }
+
+
+/* FEED PAGE */
+
+#feed_pg{
+    height: 100vh;
+    background-image: url(images/home.jpg);
+    background-size: cover;
+}
+
+#feed_name{
+    text-transform: uppercase;
+    font-weight:400 !important;
+    letter-spacing: 2vw;
+    font-size: 5vw;
+}
+
+#feed_gm{
+
+}
