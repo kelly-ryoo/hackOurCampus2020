@@ -1,3 +1,9 @@
+<?php
+
+/*home  page */
+include_once('header.php');
+
+?>   
     <!-- WELCOME -->
     <div class="row">
         <h3 class="home_header" id="welcome">welcome</h3>
@@ -19,3 +25,7 @@
         <div class="col-sm-4"></div>
         <button class="col-sm-4 home-button"><a href="sign_up.html">sign up</a></button>
     </div>
+
+<?php
+include_once('footer.php');
+?>
