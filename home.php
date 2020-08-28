@@ -5,7 +5,7 @@
 
     <!-- WEBSITE TITLE -->
     <div class="row">
-        <h1 class="home_header" id="web_title">webname</h1>
+        <h1 class="home_header" id="web_title">Collab</h1>
     </div>
     
     <!-- LOG IN BUTTON -->
