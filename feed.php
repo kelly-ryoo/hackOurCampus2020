@@ -1,29 +1,8 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>WEBSITE TITLE</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="styles.css?v=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-</head>
-
-<body class="container" id="feed_pg">
-
-<div class="body">
-
-  <div class="col-sm-6 text-center">
+<?php
+/* the feed page */ 
+    include_once('header.php');
+?>
+<div class="col-sm-6 text-center">
     <img src="images/default-man.png" class="feed_img">
     <button class="contact_button popup" onclick="popup()">Contact Info
       
@@ -56,5 +35,6 @@
   <div class="col-sm-1"><button id="feed_next"><i class="fa fa-angle-double-right fa-4x"></i></button></div>
 </div>
 
-</body>
-</html>
+<?php
+    include_once('footer.php');
+?>
