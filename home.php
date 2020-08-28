@@ -17,13 +17,13 @@ include_once('header.php');
     <!-- LOG IN BUTTON -->
     <div class="row home-bt-1">
         <div class="col-sm-4"></div>
-        <button class="col-sm-4 home-button"><a href="log_in.php">log in</a></button>
+        <button class="col-sm-4 home-button" onclick="window.location.href='log_in.php'">log in</button>
     </div>
 
     <!-- SIGN UP BUTTON -->
     <div class="row home-bt-2">
         <div class="col-sm-4"></div>
-        <button class="col-sm-4 home-button"><a href="sign_up.php">sign up</a></button>
+        <button class="col-sm-4 home-button" onclick="window.location.href='sign_up.php'">sign up</button>
     </div>
 
 <?php
