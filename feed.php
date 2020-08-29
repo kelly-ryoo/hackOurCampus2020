@@ -3,7 +3,6 @@
   1. check if while loop works - the user should be able to see the next
   'matched' person's information by clicking the next button
   2. find out how to get userid/info of the person who is currently logged in
-  3. figure out how to display profile image
 -->
 
 <?php
@@ -27,6 +26,36 @@
   $query = "select * user;"; /* might not need ; will have to test ?*/
   $result = mysqli_query($conn, $query);
 
+  /* GET INFO OF CURRENT USER */
+  $current_sql = "SELECT email * FROM user";
+  $current_result = $conn->query($current_sql);
+  $current_userID = 0;
+
+  include 'log_in.php';
+  $current_email = FUN_RETURNS_EMAIL();
+  while($rows = mysqli_fetch_assoc($current_result)){
+    if($current_email == $rows[]){
+      
+    }
+  }
+
+  $current_user_info = [];
+  while(){
+    $next_pressed = false;
+    $current_user_info[0] = $rows['firstName'];
+    $current_user_info[1] = $rows['lastName'];
+    $current_user_info[2] = $rows['email'];
+    $current_user_info[3] = $rows['major'];
+    $current_user_info[4] = $rows['classYear'];
+    $current_user_info[5] = $rows['courses'];
+    $current_user_info[6] = $rows['studyHabits'];
+    $current_user_info[7] = $rows['profileImage'];
+
+    $current_user_courses[5] = explode(",", $user_database_info[5]);
+  }
+
+
+
   /* GET INFORMATION FROM TABLE */
   /*
   1. create a while loop that will run all rows and if next button is pressed
@@ -39,20 +68,17 @@
   $next_pressed = true;
   while($rows = mysqli_fetch_assoc($result) && $next_pressed == true):
     $next_pressed = false;
-    $user_database_info = $rows['firstName'];
-    $user_database_info = $rows['lastName'];
-    $user_database_info = $rows['email'];
-    $user_database_info = $rows['major'];
-    $user_database_info = $rows['classYear'];
-    $user_database_info = $rows['courses'];
-    $user_database_info = $rows['studyHabits'];
-    $user_database_info = $rows['profileImage'];
+    $user_database_info[0] = $rows['firstName'];
+    $user_database_info[1] = $rows['lastName'];
+    $user_database_info[2] = $rows['email'];
+    $user_database_info[3] = $rows['major'];
+    $user_database_info[4] = $rows['classYear'];
+    $user_database_info[5] = $rows['courses'];
+    $user_database_info[6] = $rows['studyHabits'];
+    $user_database_info[7] = $rows['profileImage'];
 
-  $user_database_courses = explode(",", $user_database_info[5]);
-  
-  /* figure out how to get current user info ?? hard coded an example arr below for now */
-  $current_user_info = array("Em", "Smith", "em@gmail.com", "Sociology", "2024", "CS 51389, VIST 1100, Math 2210, HIST 1100", "I like to study at libraries.", "image");
-  $current_user_courses = explode(",", $current_user_info[5]);
+  $user_database_courses[5] = explode(",", $user_database_info[5]);
+
 
   /* } */
 
