@@ -6,6 +6,7 @@
 -->
 
 <?php
+
 /* the feed page */ 
     include_once('header.php');
     $userID = 1;
@@ -14,44 +15,47 @@
 <?php
 
   /* SET UP */
-  $dbhost = 'localhost';
-  $dbuser = 'root';
-  $dbpass = 'password';
-  $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+  $conn = mysqli_connect('localhost', 'root', '');
   if($conn === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
   }
   mysqli_select_db($conn, 'register_db');
 
-  $query = "select * user;"; /* might not need ; will have to test ?*/
-  $result = mysqli_query($conn, $query);
+  $query = "SELECT * FROM user";      /* might not need ; will have to test ?*/
+  $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+  
 
   /* GET INFO OF CURRENT USER */
-  $current_sql = "SELECT email * FROM user";
-  $current_result = $conn->query($current_sql);
+  $current_sql = "SELECT email FROM user";
+  $current_result = mysqli_query($conn, $current_sql) or die(mysqli_error($conn));
   $current_userID = 0;
 
-  include 'log_in.php';
-  $current_email = FUN_RETURNS_EMAIL();
-  while($rows = mysqli_fetch_assoc($current_result)){
-    if($current_email == $rows[]){
-      
+
+  $userName = $curr_user;
+  while($row2 = mysqli_fetch_array($current_result)){
+    $index_email = $row2['email'];
+    if($current_email == $index_email){
+      $current_userID = $rows['userID'];
     }
   }
 
   $current_user_info = [];
-  while(){
-    $next_pressed = false;
-    $current_user_info[0] = $rows['firstName'];
-    $current_user_info[1] = $rows['lastName'];
-    $current_user_info[2] = $rows['email'];
-    $current_user_info[3] = $rows['major'];
-    $current_user_info[4] = $rows['classYear'];
-    $current_user_info[5] = $rows['courses'];
-    $current_user_info[6] = $rows['studyHabits'];
-    $current_user_info[7] = $rows['profileImage'];
-
-    $current_user_courses[5] = explode(",", $user_database_info[5]);
+  while($rows = mysqli_fetch_assoc($result)){
+    
+    if($rows['userID'] == $current_userID):
+      $current_user_info[0] = $rows['firstName'];
+      $current_user_info[1] = $rows['lastName'];
+      $current_user_info[2] = $rows['email'];
+      $current_user_info[3] = $rows['major'];
+      $current_user_info[4] = $rows['classYear'];
+      $current_user_info[5] = $rows['courses'];
+      $current_user_info[6] = $rows['studyHabits'];
+      $current_user_info[7] = $rows['profileImage'];
+      
+      $current_user_courses[5] = explode(",", $user_database_info[5]);
+      break;
+    endif;
   }
 
 
