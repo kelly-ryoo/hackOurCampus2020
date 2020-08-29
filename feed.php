@@ -77,8 +77,6 @@
 ?>
 
 <div class="col-sm-6 text-center">
-    <!-- coded 2 scenarios for now: sql stores as string or as file type -->
-    <img src="images/default-man.png" class="feed_img"> <!-- change href -->
     <img class="feed_img"><?php echo $user_database_info = $rows['profileImage']; ?></img>
     <button class="contact_button popup" onclick="popup()">Contact Info</button>
   </div>
