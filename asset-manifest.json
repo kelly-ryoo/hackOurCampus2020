@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/podcast/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/podcast/static/js/main.290e4f49.chunk.js",
+    "main.js.map": "/podcast/static/js/main.290e4f49.chunk.js.map",
+    "runtime-main.js": "/podcast/static/js/runtime-main.80f823de.js",
+    "runtime-main.js.map": "/podcast/static/js/runtime-main.80f823de.js.map",
+    "static/js/2.a0ff225c.chunk.js": "/podcast/static/js/2.a0ff225c.chunk.js",
+    "static/js/2.a0ff225c.chunk.js.map": "/podcast/static/js/2.a0ff225c.chunk.js.map",
+    "static/js/3.ff142cd8.chunk.js": "/podcast/static/js/3.ff142cd8.chunk.js",
+    "static/js/3.ff142cd8.chunk.js.map": "/podcast/static/js/3.ff142cd8.chunk.js.map",
+    "index.html": "/podcast/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/podcast/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.a0ff225c.chunk.js.LICENSE.txt": "/podcast/static/js/2.a0ff225c.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/podcast/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.80f823de.js",
+    "static/js/2.a0ff225c.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.290e4f49.chunk.js"
+  ]
+}
